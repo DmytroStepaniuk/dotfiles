@@ -27,14 +27,20 @@ Plug 'miyakogi/conoline.vim'
 
 Plug 'morhetz/gruvbox'
 
+" FiraCode Nerd Font
+Plug 'ryanoasis/vim-devicons'
+
 " Initialize plugin system
 call plug#end()
 
 " Mappings
 
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 colorscheme gruvbox
 set background=dark
 
 let g:conoline_auto_enable = 1
+
+set guifont=FiraCode\ Nerd\ Font:h15
