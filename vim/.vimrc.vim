@@ -38,6 +38,8 @@ call plug#end()
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
+" set termguicolors
+
 colorscheme gruvbox
 set background=dark
 
