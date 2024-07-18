@@ -3,3 +3,6 @@
 
 [alias]
   heir = log --all --graph --decorate --oneline --simplify-by-decoration
+
+[alias]
+  lb = "!for i in $(seq 1 20); do git rev-parse --abbrev-ref @{-$i} 2> /dev/null; done"
