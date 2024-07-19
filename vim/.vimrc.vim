@@ -1,9 +1,17 @@
 set number
 set expandtab
-set tabstop=3
+set tabstop=2
 
 set hlsearch
 set incsearch
+set errorbells
+set nocompatible
+
+filetype on
+filetype plugin on
+filetype indent on
+
+set wildmenu
 
 syntax on
 
