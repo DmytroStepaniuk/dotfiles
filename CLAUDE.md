@@ -11,9 +11,10 @@ and act as thin wrappers: each one includes/sources the corresponding file from
 this repo. The repo holds only the portable, machine-independent part.
 
 ```
-~/.gitconfig  --[include]-->  ~/dotfiles/git/.gitconfig
-~/.vimrc      --[source]--->  ~/dotfiles/vim/.vimrc.vim
-~/.zshrc      --[source]--->  ~/dotfiles/zsh/ltag.sh
+~/.gitconfig   --[include]-->  ~/dotfiles/git/.gitconfig
+~/.vimrc       --[source]--->  ~/dotfiles/vim/.vimrc.vim
+~/.zshrc       --[source]--->  ~/dotfiles/zsh/ltag.sh
+~/.config/nvim --[symlink]-->  ~/dotfiles/nvim/
 ```
 
 What does NOT belong here: project/work config (lives in `~/.zshrc_ext/` —
@@ -27,6 +28,7 @@ secrets (live in macOS Keychain, read via `security find-generic-password`).
 | `git/` | Git aliases: `lg` (pretty graph log), `heir` (branches/tags-only tree), `lb` (last 20 visited branches) | |
 | `vim/` | Vim config: options + vim-plug plugins (NERDTree, ctrlp, fugitive, auto-pairs, better-whitespace, gruvbox, devicons) | Plugins install with `:PlugInstall`; requires [vim-plug](https://github.com/junegunn/vim-plug) |
 | `zsh/` | Shell functions: `ltag` (checkout latest git tag) | |
+| `nvim/` | Neovim config based on AstroNvim (from AstroNvim/template) | Whole dir symlinked as `~/.config/nvim`; plugins bootstrap via lazy.nvim on first start |
 
 ## Installation on a new machine
 
