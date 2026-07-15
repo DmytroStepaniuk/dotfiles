@@ -51,3 +51,13 @@ printf '\nsource ~/dotfiles/zsh/ltag.sh\n' >> ~/.zshrc
 - Commit messages: short, lowercase, prefixed — `add: ...`, `upd: ...`
 - Comments and messages in code: English
 - Each dir has its own `README.md` with the one-liner install command
+- **Font: JetBrainsMono Nerd Font Mono** — Dmytro's preferred font (he likes it,
+  that's why it's set everywhere). Installed via
+  `brew install --cask font-jetbrains-mono-nerd-font`. When adding font settings
+  to any config (vim guifont, terminal configs, editors), use this font.
+
+## Maintaining this file
+
+Update CLAUDE.md immediately whenever anything worth reflecting here changes:
+new dirs/files, changed install steps, new conventions or preferences.
+Don't defer — an outdated CLAUDE.md is worse than none.

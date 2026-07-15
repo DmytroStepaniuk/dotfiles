@@ -49,4 +49,5 @@ let NERDTreeShowHidden=1
 colorscheme gruvbox
 set background=dark
 
-set guifont=FiraCode\ Nerd\ Font:h15
+" JetBrainsMono Nerd Font is the preferred font across all tools
+set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h15
