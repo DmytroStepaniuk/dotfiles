@@ -17,8 +17,8 @@ this repo. The repo holds only the portable, machine-independent part.
 ~/.config/nvim --[symlink]-->  ~/dotfiles/nvim/
 ```
 
-What does NOT belong here: project/work config (lives in `~/.zshrc_ext/` —
-gp.sh for Gopuff, w.sh for W Energy, claude.sh for Claude Code accounts),
+What does NOT belong here: project/work config (lives in `~/.zshrc_ext/`,
+one file per project, incl. claude.sh with Claude Code account aliases),
 secrets (live in macOS Keychain, read via `security find-generic-password`).
 
 ## Contents
@@ -29,6 +29,7 @@ secrets (live in macOS Keychain, read via `security find-generic-password`).
 | `vim/` | Vim config: options + vim-plug plugins (NERDTree, ctrlp, fugitive, auto-pairs, better-whitespace, gruvbox, devicons) | Plugins install with `:PlugInstall`; requires [vim-plug](https://github.com/junegunn/vim-plug) |
 | `zsh/` | Shell functions: `ltag` (checkout latest git tag) | |
 | `nvim/` | Neovim config based on AstroNvim (from AstroNvim/template) | Whole dir symlinked as `~/.config/nvim`; plugins bootstrap via lazy.nvim on first start. Also used by Neovide (GUI client, `brew install --cask neovide`) — see `nvim/README.md` |
+| `claude/` | `CLAUDE-global.md` — shared Claude Code user memory (language, font, env preferences) | Imported via `@~/dotfiles/claude/CLAUDE-global.md` line at the top of each account's `~/.claude-accounts/*/CLAUDE.md` |
 
 ## Installation on a new machine
 
