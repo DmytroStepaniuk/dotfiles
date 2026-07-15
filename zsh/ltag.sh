@@ -1,19 +1,17 @@
 #!/bin/bash
 
-# Додавання функції ltag
+# ltag — checkout the latest git tag
 ltag() {
-  # Отримуємо список тегів та сортуємо їх за спаданням версій
+  # Get tags sorted by version, descending
   tags=($(git tag --sort=-v:refname))
 
   if [ ${#tags[@]} -eq 0 ]; then
-    echo "У вас немає жодного тегу."
+    echo "You don't have any tags."
   else
-    # Останній тег
+    # The latest tag
     latest_tag=${tags[0]}
-    echo "Перехід на останній тег: $latest_tag"
+    echo "Checking out the latest tag: $latest_tag"
 
-    # Перехід на останній тег
     git checkout $latest_tag
   fi
 }
-
