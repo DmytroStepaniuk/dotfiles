@@ -26,4 +26,3 @@ Shared, account-agnostic preferences. Imported via `@` from each account's
 
 - **Font**: JetBrainsMono Nerd Font Mono — use in any font-related config
   (installed via `brew install --cask font-jetbrains-mono-nerd-font`)
-- **Editors**: nvim (AstroNvim, config in `~/dotfiles/nvim`), Neovide as GUI
