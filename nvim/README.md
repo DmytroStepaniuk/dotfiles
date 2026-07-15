@@ -18,3 +18,19 @@ nvim  # lazy.nvim bootstraps and installs all plugins on first start
 - `lua/plugins/neo-tree.lua` — show dotfiles in the file tree
 - `lua/polish.lua` — guifont (JetBrainsMono Nerd Font Mono) for GUI clients
 - `lazy-lock.json` — pinned plugin versions (tracked)
+
+## Neovide (optional GUI)
+
+[Neovide](https://neovide.dev) is a GPU-accelerated GUI client for Neovim —
+same nvim, same config and plugins, just rendered in its own window with
+smooth animations instead of the terminal. Not a replacement for terminal
+nvim (which is still needed over SSH, in tmux, etc.) — they coexist.
+
+```bash
+brew install --cask neovide
+neovide .   # open current dir; picks up this config automatically
+```
+
+Neovide-specific tuning (animations, opacity, ...) goes into
+`lua/polish.lua` inside an `if vim.g.neovide then ... end` block —
+that variable only exists when nvim runs under Neovide.

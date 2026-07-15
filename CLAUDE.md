@@ -28,7 +28,7 @@ secrets (live in macOS Keychain, read via `security find-generic-password`).
 | `git/` | Git aliases: `lg` (pretty graph log), `heir` (branches/tags-only tree), `lb` (last 20 visited branches) | |
 | `vim/` | Vim config: options + vim-plug plugins (NERDTree, ctrlp, fugitive, auto-pairs, better-whitespace, gruvbox, devicons) | Plugins install with `:PlugInstall`; requires [vim-plug](https://github.com/junegunn/vim-plug) |
 | `zsh/` | Shell functions: `ltag` (checkout latest git tag) | |
-| `nvim/` | Neovim config based on AstroNvim (from AstroNvim/template) | Whole dir symlinked as `~/.config/nvim`; plugins bootstrap via lazy.nvim on first start |
+| `nvim/` | Neovim config based on AstroNvim (from AstroNvim/template) | Whole dir symlinked as `~/.config/nvim`; plugins bootstrap via lazy.nvim on first start. Also used by Neovide (GUI client, `brew install --cask neovide`) — see `nvim/README.md` |
 
 ## Installation on a new machine
 
