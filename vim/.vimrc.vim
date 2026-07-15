@@ -4,8 +4,14 @@ set tabstop=2
 
 set hlsearch
 set incsearch
-set errorbells
+set ignorecase
+set smartcase
+set noerrorbells
 set nocompatible
+
+set cursorline
+set mouse=a
+set clipboard=unnamed
 
 filetype on
 filetype plugin on
@@ -16,23 +22,15 @@ set wildmenu
 syntax on
 
 " Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Multiple Plug commands can be written in
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-" Plug 'Valloric/YouCompleteMe'
+Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'miyakogi/conoline.vim'
 
 " Color Schemas
-
 Plug 'morhetz/gruvbox'
 
 " FiraCode Nerd Font
@@ -50,7 +48,5 @@ let NERDTreeShowHidden=1
 
 colorscheme gruvbox
 set background=dark
-
-let g:conoline_auto_enable = 1
 
 set guifont=FiraCode\ Nerd\ Font:h15
